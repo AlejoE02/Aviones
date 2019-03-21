@@ -5,6 +5,8 @@
  */
 package com.mycompany.avion;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Alejo02
@@ -16,6 +18,8 @@ public class PersonaCliente {
     private Integer numIdentificacion;
     
     private String fechaNacimiento;
+    
+    private ArrayList<PersonaCliente> persona;
 
     public PersonaCliente(String nombre, Integer numIdentificacion, String fechaNacimiento) {
         this.nombre = nombre;
@@ -46,5 +50,15 @@ public class PersonaCliente {
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    public ArrayList<PersonaCliente> getPersona() {
+        return persona;
+    }
+
+    public void setPersona(ArrayList<PersonaCliente> persona) {
+        this.persona = persona;
+    }
+    
+    
         
 }
