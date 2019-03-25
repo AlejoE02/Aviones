@@ -42,12 +42,18 @@ public class MenuCompra {
         opcion = sc.next();
         switch (opcion) {
             case "0":
+                System.out.println("\033[32mD = " + "\033[32mDisponible"
+                        + "\n\033[31mX = "+ "\033[31mOcupado");
                 pintarSillasGrande(avion.get(0).getSillas());
                 break;
             case "1":
+                System.out.println("\033[32mD = " + "\033[32mDisponible"
+                        + "\033[31mX = "+ "\033[31mOcupado");
                 pintarSillasMediano(avion.get(1).getSillas());
                 break;
             case "2":
+                System.out.println("\033[32mD = " + "\033[32mDisponible"
+                        + "\033[31mX = "+ "\033[31mOcupado");
                 pintarSillasJet(avion.get(2).getSillas());
                 break;
             case "3":
@@ -300,7 +306,7 @@ public class MenuCompra {
                 avion.get(2).setEstado(true);
                 System.out.println("Vuelo cerrado Exitosamente");
                 break;
-            case "3": 
+            case "3":
                 break;
             default:
                 System.out.println("!Opcion no Valida¡");
