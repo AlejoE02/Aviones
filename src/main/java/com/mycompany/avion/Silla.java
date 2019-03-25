@@ -10,11 +10,7 @@ package com.mycompany.avion;
  * @author Alejo02
  */
 public class Silla {
-    
-    private char posicionX;
-    
-    private int posicionY;
-    
+       
     private String tipoSilla;
     
     private int precio;
@@ -23,28 +19,10 @@ public class Silla {
     
     private PersonaCliente persona;
 
-    public Silla(char posicionX, int posicionY, String tipoSilla, int precio, boolean estado) {
-        this.posicionX = posicionX;
-        this.posicionY = posicionY;
+    public Silla( String tipoSilla, int precio, boolean estado) {
         this.tipoSilla = tipoSilla;
         this.precio = precio;
         this.estado = estado;
-    }
-
-    public char getPosicionX() {
-        return posicionX;
-    }
-
-    public void setPosicionX(char posicionX) {
-        this.posicionX = posicionX;
-    }
-
-    public int getPosicionY() {
-        return posicionY;
-    }
-
-    public void setPosicionY(int posicionY) {
-        this.posicionY = posicionY;
     }
 
     public String getTipoSilla() {

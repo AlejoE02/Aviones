@@ -6,6 +6,8 @@
 package com.mycompany.avion;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -17,15 +19,15 @@ public class Avion {
     
     private String tipoAvion;
     
-    private final boolean estado;
+    private boolean estado;
     
-    ArrayList<Silla> sillas;
+    private HashMap<String, Silla> sillas;
     
-    public Avion(String destino, String tipoAvion) {
+    public Avion(String destino, String tipoAvion, boolean estado) {
         this.destino = destino;
         this.tipoAvion = tipoAvion;
-        sillas=new ArrayList<>();
-        this.estado=true;
+        sillas=new HashMap<>();
+        this.estado = estado;
     }
 
     public String getDestino() {
@@ -44,14 +46,21 @@ public class Avion {
         this.tipoAvion = tipoAvion;
     }
 
-    public ArrayList<Silla> getSillas() {
+    public HashMap<String, Silla> getSillas() {
         return sillas;
     }
 
-    public void setSillas(ArrayList<Silla> sillas) {
+    public void setSillas(HashMap<String, Silla> sillas) {
         this.sillas = sillas;
     }
-    
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
     
     
 }
