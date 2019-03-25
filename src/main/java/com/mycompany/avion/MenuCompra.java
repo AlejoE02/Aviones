@@ -42,18 +42,12 @@ public class MenuCompra {
         opcion = sc.next();
         switch (opcion) {
             case "0":
-                System.out.println("\033[32mD = " + "\033[32mDisponible"
-                        + "\n\033[31mX = "+ "\033[31mOcupado");
                 pintarSillasGrande(avion.get(0).getSillas());
                 break;
             case "1":
-                System.out.println("\033[32mD = " + "\033[32mDisponible"
-                        + "\033[31mX = "+ "\033[31mOcupado");
                 pintarSillasMediano(avion.get(1).getSillas());
                 break;
             case "2":
-                System.out.println("\033[32mD = " + "\033[32mDisponible"
-                        + "\033[31mX = "+ "\033[31mOcupado");
                 pintarSillasJet(avion.get(2).getSillas());
                 break;
             case "3":
@@ -66,6 +60,8 @@ public class MenuCompra {
     }
 
     public void pintarSillasGrande(HashMap<String, Silla> mapaSillas) {
+        System.out.println("\033[32mD = " + "\033[32mDisponible"
+                        + "\n\033[31mX = "+ "\033[31mOcupado");
         System.out.println("\033[34m                              ***");
         System.out.println("\033[34m                             *****");
         System.out.println("\033[34m                            *******");
@@ -113,6 +109,8 @@ public class MenuCompra {
     }
 
     public void pintarSillasMediano(HashMap<String, Silla> mapaSillas) {
+        System.out.println("\033[32mD = " + "\033[32mDisponible"
+                        + "\n\033[31mX = "+ "\033[31mOcupado");
         System.out.println("\033[34m                              ***");
         System.out.println("\033[34m                             *****");
         System.out.println("\033[34m                            *******");
@@ -160,6 +158,8 @@ public class MenuCompra {
     }
 
     public void pintarSillasJet(HashMap<String, Silla> mapaSillas) {
+        System.out.println("\033[32mD = " + "\033[32mDisponible"
+                        + "\n\033[31mX = "+ "\033[31mOcupado");
         System.out.println("\033[34m                              ***");
         System.out.println("\033[34m                             *****");
         System.out.println("\033[34m                            *******");
