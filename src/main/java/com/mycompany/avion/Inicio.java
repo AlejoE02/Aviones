@@ -32,26 +32,30 @@ public class Inicio {
 
     public void menuCompra() {
         mc = new MenuCompra(listas);
-        int opcion;
+        boolean seguir = true;
+        String opcion;
         do {
             System.out.println("FLYUDEC");
             System.out.println("1. Comprar Tiquete");
             System.out.println("2. Finalizar Compras");
             System.out.println("3. Ver Reporte de Ventas");
             System.out.print("Escoja la opción : ");
-            opcion = sc.nextInt();
+            opcion = sc.next();
             switch (opcion) {
-                case 1:
+                case "1":
                     mc.verAviones(listas.getAvion());
                     break;
-                case 2:
+                case "2":
                     mc.cerrarVuelo(listas.getAvion());
                     break;
-                case 3:
+                case "3":
                     mc.reporteVentas(listas.getAvion());
                     break;
+                case "4":
+                    System.out.println("!Opcion no Valida¡");
+                    break;
             }
-        } while (opcion != 0);
+        } while (seguir = true );
     }
 
     public void llenarAviones() {
@@ -108,25 +112,24 @@ public class Inicio {
         listas.getAvion().get(0).getSillas().put("J3", new Silla("Turista", 400, false));
         listas.getAvion().get(0).getSillas().put("J4", new Silla("Turista", 400, false));
     }
-    
-    
-    public void sillas2(){
-        
+
+    public void sillas2() {
+
         listas.getAvion().get(1).getSillas().put("A1", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("A2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("A3", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("A4", new Silla("Turista", 400, false));
-        
+
         listas.getAvion().get(1).getSillas().put("B1", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("B2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("B3", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("B4", new Silla("Turista", 400, false));
-        
+
         listas.getAvion().get(1).getSillas().put("C1", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("C2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("C3", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("C4", new Silla("Turista", 400, false));
-        
+
         listas.getAvion().get(1).getSillas().put("D1", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("D2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("D3", new Silla("Turista", 400, false));
@@ -146,12 +149,12 @@ public class Inicio {
         listas.getAvion().get(1).getSillas().put("G2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("G3", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("G4", new Silla("Turista", 400, false));
-        
+
         listas.getAvion().get(1).getSillas().put("H1", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("H2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("H3", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("H4", new Silla("Turista", 400, false));
-        
+
         listas.getAvion().get(1).getSillas().put("I1", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("I2", new Silla("Turista", 400, false));
         listas.getAvion().get(1).getSillas().put("I3", new Silla("Turista", 400, false));
@@ -173,7 +176,7 @@ public class Inicio {
 
         listas.getAvion().get(2).getSillas().put("C1", new Silla("Primera Clase", 1000, false));
         listas.getAvion().get(2).getSillas().put("C2", new Silla("Primera Clase", 1000, false));
-        
+
         listas.getAvion().get(2).getSillas().put("D1", new Silla("Primera Clase", 1000, false));
         listas.getAvion().get(2).getSillas().put("D2", new Silla("Primera Clase", 1000, false));
     }

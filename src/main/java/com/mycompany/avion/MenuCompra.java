@@ -30,7 +30,7 @@ public class MenuCompra {
     }
 
     public void verAviones(ArrayList<Avion> avion) {
-        int opcion;
+        String opcion;
         for (int i = 0; i < avion.size(); i++) {
             if (avion.get(i).isEstado() == false) {
                 System.out.println(i + "." + " Destino : " + avion.get(i).getDestino() + ", " + " Tipo : "
@@ -39,18 +39,18 @@ public class MenuCompra {
         }
         System.out.println("3. Cancelar");
         System.out.print("Escoja la opcion : ");
-        opcion = sc.nextInt();
+        opcion = sc.next();
         switch (opcion) {
-            case 0:
+            case "0":
                 pintarSillasGrande(avion.get(0).getSillas());
                 break;
-            case 1:
+            case "1":
                 pintarSillasMediano(avion.get(1).getSillas());
                 break;
-            case 2:
+            case "2":
                 pintarSillasJet(avion.get(2).getSillas());
                 break;
-            case 3:
+            case "3":
                 break;
             default:
                 System.out.println("!Opcion no Valida¡");
@@ -277,7 +277,7 @@ public class MenuCompra {
     }
 
     public void cerrarVuelo(ArrayList<Avion> avion) {
-        int opcion;
+        String opcion;
         for (int i = 0; i < avion.size(); i++) {
             if (avion.get(i).isEstado() == false) {
                 System.out.println(i + "." + " Destino : " + avion.get(i).getDestino() + ", " + " Tipo : "
@@ -286,23 +286,24 @@ public class MenuCompra {
         }
         System.out.println("3. Cancelar");
         System.out.print("Seleccione el avion que desea cerrar : ");
-        opcion = sc.nextInt();
+        opcion = sc.next();
         switch (opcion) {
-            case 0:
+            case "0":
                 avion.get(0).setEstado(true);
                 System.out.println("Vuelo cerrado Exitosamente");
                 break;
-            case 1:
+            case "1":
                 avion.get(1).setEstado(true);
                 System.out.println("Vuelo cerrado Exitosamente");
                 break;
-            case 2:
+            case "2":
                 avion.get(2).setEstado(true);
                 System.out.println("Vuelo cerrado Exitosamente");
                 break;
-            case 3: 
+            case "3": 
                 break;
             default:
+                System.out.println("!Opcion no Valida¡");
                 break;
         }
     }
